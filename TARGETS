@@ -1,0 +1,23 @@
+load("@fbcode_macros//build_defs:thrift_library.bzl", "thrift_library")
+
+thrift_library(
+    name = "good",
+    go_thrift_namespaces = {"Good.thrift": "example.Good"},
+    languages = [
+        "go",
+    ],
+    thrift_srcs = {
+        "Good.thrift": [],
+    },
+)
+
+thrift_library(
+    name = "bad",
+    go_thrift_namespaces = {"Bad.thrift": "example.Bad"},
+    languages = [
+        "go",
+    ],
+    thrift_srcs = {
+        "Bad.thrift": [],
+    },
+)
